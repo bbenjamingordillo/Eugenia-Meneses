@@ -201,11 +201,6 @@
   .quote .hand { margin-top: 10px; display: block; }
 
   /* Docencia */
-  .teach .wrap { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
-  .teach .board { width: 150px; height: 150px; border-radius: 32px; background: var(--sky); display: grid; place-items: center; }
-  .teach .board svg { width: 86px; height: 86px; }
-  .teach .text { display: grid; gap: 12px; }
-  @media (max-width: 700px) { .teach .wrap { grid-template-columns: 1fr; } .teach .board { width: 110px; height: 110px; } }
 
   /* FAQ */
   .faq { background: linear-gradient(160deg, var(--sky) 0%, #EAF6F0 55%, var(--sun-soft) 100%); border-block: 1px solid var(--line); }
@@ -273,7 +268,6 @@
   #sobre-mi { background: #E9F6EC; border-color: #D3EBD9; }
   #como-trabajo { background: #EAF4FC; }
   #temas { background-color: #FFF8E3; --grid: #F6E8BF; }
-  #docencia { background: #FDEBF0; }
   #contacto { background: #E6F4EA; }
   footer { background: #F3E7D8; }
   /* ---------- Aparición de secciones (fade-in desde abajo) ---------- */
@@ -322,7 +316,6 @@
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#como-trabajo">Cómo trabajo</a>
     <a href="#temas">Temas</a>
-    <a href="#docencia">Docencia</a>
     <a href="#preguntas">Preguntas frecuentes</a>
     <a href="#contacto">Contacto</a>
   </nav>
@@ -410,6 +403,7 @@
         <h2>Escuchar lo singular de cada historia</h2>
         <p>Soy Licenciada en Psicología egresada de la Universidad Nacional de Córdoba y profesora de nivel superior. Mi práctica clínica está dedicada, sobre todo, a las infancias y adolescencias.</p>
         <p>Creo en un espacio donde se pueda jugar, dibujar, hablar o quedarse en silencio: cada chico y cada chica encuentra su propio modo de decir lo que le pasa. Mi trabajo es alojar eso, sin apuro y sin etiquetas.</p>
+        <p>Además, como docente de nivel superior, comparto con estudiantes una mirada sobre las infancias y adolescencias de hoy: lo que la época les propone y lo que cada subjetividad hace con eso.</p>
         <span class="hand">“Hay algo en lo vivo que insiste…”</span>
       </div>
       <ul class="creds">
@@ -537,27 +531,6 @@
       <div class="quote">
         <p>“Hay experiencias que parecen definirnos… una pérdida, una separación, un rechazo.”</p>
         <span class="hand">— y sin embargo, siempre hay algo más para decir</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= DOCENCIA ================= -->
-  <section class="teach deco" id="docencia">
-    <svg class="floaty" style="--s:48px; top:14%; right:6%; --d:6.5s" aria-hidden="true"><use href="#i-star"/></svg>
-    <svg class="floaty hide-sm" style="--s:52px; bottom:12%; right:18%; --d:8s; --dl:-3s" aria-hidden="true"><use href="#i-smile"/></svg>
-    <div class="wrap">
-      <div class="board">
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M8 20l24-10 24 10-24 10z" fill="var(--paper)"/>
-          <path d="M18 25v12c8 6 20 6 28 0V25"/>
-          <path d="M56 20v14"/>
-          <circle cx="56" cy="37" r="2.5" fill="var(--coral)"/>
-        </svg>
-      </div>
-      <div class="text">
-        <span class="eyebrow">Docencia</span>
-        <h2>También en el aula</h2>
-        <p class="lead">Como profesora de nivel superior, comparto con estudiantes y docentes una mirada sobre las infancias y adolescencias de hoy: lo que la época les propone y lo que cada subjetividad hace con eso.</p>
       </div>
     </div>
   </section>
