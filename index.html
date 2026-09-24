@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/png" href="eugenia-meneses.png">
 <title>Lic. Eugenia Meneses</title>
-<meta name="description" content="Lic. Eugenia Meneses, psicóloga (UNC). Atención de niños, niñas y adolescentes. Sesiones presenciales y virtuales.">
+<meta name="description" content="Lic. Eugenia Meneses, psicóloga y psicoterapeuta (UNC). Acompañamiento terapéutico en las distintas etapas de la vida, con especial dedicación a niños, niñas y adolescentes. Enfoque psicoanalítico e integrativo. Sesiones presenciales y virtuales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Caveat:wght@600&display=swap">
@@ -156,10 +156,10 @@
   .creds span { color: var(--ink-soft); font-size: .95rem; }
   @media (max-width: 860px) { .about .wrap { grid-template-columns: 1fr; gap: 32px; } }
 
-  /* Cómo trabajo: 5 tarjetas con el mismo formato (2 arriba, 3 abajo) */
-  .work-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
-  .work { grid-column: span 2; padding: 28px 26px; border-radius: 26px; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); display: grid; gap: 10px; align-content: start; }
-  .work.w-pres, .work.w-virt { grid-column: span 3; }
+  /* Cómo trabajo: 6 tarjetas con el mismo formato (2 arriba, 4 abajo) */
+  .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
+  .work { grid-column: span 3; padding: 28px 26px; border-radius: 26px; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); display: grid; gap: 10px; align-content: start; }
+  .work.w-pres, .work.w-virt { grid-column: span 6; }
   .work .age { font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
   .work svg { width: 54px; height: 54px; margin-bottom: 4px; }
   .work ul { margin: 4px 0 0; padding-left: 1.2em; color: var(--ink-soft); }
@@ -168,8 +168,10 @@
   .w-kids { background: var(--sun-soft); }
   .w-teens { background: var(--lilac); }
   .w-fam { background: var(--mint); }
-  @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr 1fr; } .work, .work.w-pres, .work.w-virt { grid-column: span 1; } .work.w-fam { grid-column: 1 / -1; } }
-  @media (max-width: 600px) { .work-grid { grid-template-columns: 1fr; } .work.w-fam { grid-column: auto; } .work { padding: 22px 20px; } }
+  .w-adults { background: var(--cream); }
+  @media (max-width: 1100px) and (min-width: 901px) { .work { grid-column: span 6; } }
+  @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr 1fr; } .work, .work.w-pres, .work.w-virt { grid-column: span 1; } }
+  @media (max-width: 600px) { .work-grid { grid-template-columns: 1fr; } .work { padding: 22px 20px; } }
 
   /* Temas: hoja de cuaderno */
   .topics {
@@ -322,7 +324,7 @@
 </header>
 
 <!-- Burbuja flotante de WhatsApp -->
-<a class="wa-bubble" href="https://wa.me/5493517540694?text=Hola%2C%20mi%20nombre%20es%20.......%20%C2%BFMe%20podr%C3%ADas%20comentar%20c%C3%B3mo%20trabaj%C3%A1s%3F%20Muchas%20gracias." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<a class="wa-bubble" href="https://wa.me/5493515168496?text=Hola%2C%20mi%20nombre%20es%20.......%20%C2%BFMe%20podr%C3%ADas%20comentar%20c%C3%B3mo%20trabaj%C3%A1s%3F%20Muchas%20gracias." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6.1C4.9 9.8 9.9 5 16 5s11.1 4.8 11.1 10.8S22.1 26.4 16 26.4zm6.1-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.7-.4z"/></svg>
   <span class="wa-label">¿Hablamos?</span>
 </a>
@@ -370,10 +372,10 @@
     </svg>
     <div class="wrap">
       <div>
-        <span class="eyebrow">Psicóloga · Niñeces y adolescencias</span>
+        <span class="eyebrow">Psicóloga · Psicoterapeuta</span>
         <h1>Un espacio para <span class="under">poner en palabras</span> lo que pasa</h1>
-        <p class="role">Lic. Eugenia Meneses — Licenciada en Psicología (UNC)</p>
-        <p class="intro">Acompaño a niños, niñas y adolescentes —y a sus familias— en esos momentos en que algo duele, se repite o simplemente no se puede decir. Sesiones presenciales y virtuales.</p>
+        <p class="role">Lic. Eugenia Meneses — Psicóloga | Psicoterapeuta (UNC)</p>
+        <p class="intro">Acompañamiento terapéutico en las distintas etapas de la vida, con especial dedicación a niños, niñas y adolescentes. Un espacio para esos momentos en que algo duele, se repite o simplemente no se puede decir. Sesiones presenciales y virtuales.</p>
         <div class="cta-row">
           <a class="btn" href="#contacto">
             Consultar un turno
@@ -401,7 +403,7 @@
       <div class="text">
         <span class="eyebrow">Sobre mí</span>
         <h2>Escuchar lo singular de cada historia</h2>
-        <p>Soy Licenciada en Psicología egresada de la Universidad Nacional de Córdoba y profesora de nivel superior. Mi práctica clínica está dedicada, sobre todo, a las infancias y adolescencias.</p>
+        <p>Soy Licenciada en Psicología egresada de la Universidad Nacional de Córdoba y profesora de nivel superior. Como psicoterapeuta, acompaño a personas en las distintas etapas de la vida, con una dedicación especial a las infancias y adolescencias. Trabajo desde un enfoque psicoanalítico e integrativo.</p>
         <p>Creo en un espacio donde se pueda jugar, dibujar, hablar o quedarse en silencio: cada chico y cada chica encuentra su propio modo de decir lo que le pasa. Mi trabajo es alojar eso, sin apuro y sin etiquetas.</p>
         <p>Además, como docente de nivel superior, comparto con estudiantes una mirada sobre las infancias y adolescencias de hoy: lo que la época les propone y lo que cada subjetividad hace con eso.</p>
         <span class="hand">“Hay algo en lo vivo que insiste…”</span>
@@ -416,8 +418,12 @@
           <div><strong>Profesora de nivel superior</strong><span>Formación docente en psicología</span></div>
         </li>
         <li>
+          <div class="ic" style="background: var(--peach)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5C10.6 3 7.8 3.3 7.4 5.4 5 5.3 3.7 7.6 4.7 9.5 2.9 10.7 3.2 13.6 5.2 14.4c-.2 2.4 2.2 3.9 4.2 3 .6 1.6 2 2.1 2.6 1.1zM12 4.5c1.4-1.5 4.2-1.2 4.6.9 2.4-.1 3.7 2.2 2.7 4.1 1.8 1.2 1.5 4.1-.5 4.9.2 2.4-2.2 3.9-4.2 3-.6 1.6-2 2.1-2.6 1.1z"/><path d="M12 4.5v14"/></svg></div>
+          <div><strong>Psicoterapeuta</strong><span>Enfoque psicoanalítico e integrativo</span></div>
+        </li>
+        <li>
           <div class="ic" style="background: var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 20c0-2.4 1.2-4.3 3.5-4.3S22 17.6 22 20"/></svg></div>
-          <div><strong>Niños, niñas y adolescentes</strong></div>
+          <div><strong>Distintas etapas de la vida</strong><span>Especial dedicación a niños, niñas y adolescentes</span></div>
         </li>
         <li>
           <div class="ic" style="background: var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="13" height="10" rx="1.5"/><path d="M15 9l5-3v8l-5-3"/><path d="M6 19h12"/></svg></div>
@@ -500,6 +506,16 @@
           <h3>Madres, padres y familias</h3>
           <p>Encuentros de orientación para acompañar a los adultos: entender qué le pasa a su hijo o hija y pensar juntos cómo estar presentes.</p>
         </article>
+        <article class="work w-adults">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 44c0-9 8-16 20-16s20 7 20 16v6H12z" fill="var(--sky)"/>
+            <circle cx="32" cy="17" r="9" fill="var(--sun)"/>
+            <path d="M46 10c3 1 5 3 6 6M50 6c4 2 7 5 8 9"/>
+          </svg>
+          <span class="age">Adultez</span>
+          <h3>Adultos</h3>
+          <p>Un espacio para pensar lo que se repite, lo que duele o lo que cambia: vínculos, pérdidas, decisiones y momentos de transición.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -581,9 +597,9 @@
         </div>
         <ul class="contact-list">
           <li>
-            <a href="https://wa.me/5493517540694?text=Hola%2C%20mi%20nombre%20es%20.......%20%C2%BFMe%20podr%C3%ADas%20comentar%20c%C3%B3mo%20trabaj%C3%A1s%3F%20Muchas%20gracias." target="_blank" rel="noopener">
+            <a href="https://wa.me/5493515168496?text=Hola%2C%20mi%20nombre%20es%20.......%20%C2%BFMe%20podr%C3%ADas%20comentar%20c%C3%B3mo%20trabaj%C3%A1s%3F%20Muchas%20gracias." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4.1-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.5-1.8-1.3-2.3-2.3l.8-1-1-2z"/></svg>
-              <span>351 754-0694<small>WhatsApp · Consultas y turnos</small></span>
+              <span>351 516-8496<small>WhatsApp · Consultas y turnos</small></span>
             </a>
           </li>
           <li>
@@ -609,7 +625,7 @@
   <div class="wrap">
     <p class="help"><strong>Si estás atravesando una situación de crisis</strong>, no esperes a un turno: comunicate con el Centro de Asistencia al Suicida al <strong>135</strong> (CABA y GBA) o al <strong>0800 345 1435</strong> (todo el país), o con emergencias al <strong>911</strong>.</p>
     <div class="foot-row">
-      <span>© 2026 Lic. Eugenia Meneses · Psicóloga (UNC)</span>
+      <span>© 2026 Lic. Eugenia Meneses · Psicóloga | Psicoterapeuta (UNC)</span>
       <a href="https://www.instagram.com/lic_eugemeneses/" target="_blank" rel="noopener">@lic_eugemeneses</a>
     </div>
   </div>
