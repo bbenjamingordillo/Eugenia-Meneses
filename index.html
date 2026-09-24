@@ -3,7 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" type="image/png" href="eugenia-meneses.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://euge-meneses.vercel.app/">
+<meta property="og:title" content="Lic. Eugenia Meneses · Psicóloga | Psicoterapeuta">
+<meta property="og:description" content="Acompañamiento terapéutico en las distintas etapas de la vida, con especial dedicación a niños, niñas y adolescentes. Enfoque psicoanalítico e integrativo. Presencial y virtual.">
+<meta property="og:image" content="https://euge-meneses.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Foto de la Lic. Eugenia Meneses con su nombre y profesión">
+<meta name="twitter:card" content="summary_large_image">
 <title>Lic. Eugenia Meneses</title>
 <meta name="description" content="Lic. Eugenia Meneses, psicóloga y psicoterapeuta (UNC). Acompañamiento terapéutico en las distintas etapas de la vida, con especial dedicación a niños, niñas y adolescentes. Enfoque psicoanalítico e integrativo. Sesiones presenciales y virtuales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -297,6 +307,7 @@
     summary { padding: 14px 16px; font-size: 1rem; }
     details p { padding: 0 16px 16px; }
   }
+/* Celular: foto de portada más chica para que el título se vea al abrir la página */  @media (max-width: 600px) {    .hero .wrap { gap: 24px; }    .portrait { width: 180px; }    .portrait .note { left: -22%; bottom: -2%; padding: 3px 10px; }    .portrait .note .hand { font-size: 1.1rem; }    .portrait img { border-width: 4px; }    .hero .d-cloud { width: 48px; top: 10px; }  }
   @media (max-width: 380px) { .brand-name { display: none; } }
 </style>
 </head>
@@ -308,7 +319,7 @@
       <span></span><span></span><span></span>
     </button>
     <a class="brand" href="#inicio" aria-label="Inicio">
-      <img class="brand-mark" src="eugenia-meneses.png" alt="" width="40" height="40">
+      <img class="brand-mark" src="eugenia-meneses.jpg" alt="" width="40" height="40">
       <span class="brand-name">Lic. Eugenia Meneses</span>
     </a>
     <a class="btn small" href="#contacto">Pedir turno</a>
@@ -380,7 +391,6 @@
   <section class="hero deco" id="inicio">
     <svg class="floaty" style="--s:44px; bottom:8%; left:40%; --d:7s; --dl:-2s" aria-hidden="true"><use href="#i-flower"/></svg>
     <svg class="floaty" style="--s:42px; top:10%; left:3%; --d:6s" aria-hidden="true"><use href="#i-heart"/></svg>
-    <svg class="floaty hide-sm" style="--s:50px; bottom:12%; right:3%; --d:7.5s; --dl:-3s" aria-hidden="true"><use href="#i-smile"/></svg>
     <svg class="doodle d-cloud" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
       <path d="M20 48c-9 0-14-6-12-13 2-6 8-8 13-6 1-10 10-16 20-14 7 1 11 6 12 11 6-4 16-2 18 6 8 0 12 6 10 12-1 3-4 5-8 5H20z"/>
     </svg>
@@ -406,7 +416,7 @@
         <svg class="blob" viewBox="0 0 200 200" aria-hidden="true">
           <path fill="var(--sun)" d="M100 4c9 0 13 9 21 11s17-3 23 3 2 15 7 22 15 8 17 16-6 13-6 21 9 13 6 21-12 9-16 16-1 17-8 22-15 0-23 3-12 11-21 11-13-9-21-11-17 3-23-3-2-15-7-22-15-8-17-16 6-13 6-21-9-13-6-21 12-9 16-16 1-17 8-22 15 0 23-3 12-11 21-11z"/>
         </svg>
-        <img src="eugenia-meneses.png" alt="Retrato de la Lic. Eugenia Meneses, sonriendo, sentada en su consultorio" width="640" height="640">
+        <img src="eugenia-meneses.jpg" fetchpriority="high" alt="Retrato de la Lic. Eugenia Meneses, sonriendo, sentada en su consultorio" width="480" height="480">
         <div class="note"><span class="hand">¡Hola! Soy Euge</span></div>
       </div>
     </div>
@@ -416,7 +426,6 @@
   <section class="about deco" id="sobre-mi">
     <svg class="floaty" style="--s:46px; top:10%; left:2%; --d:8s; --dl:-1s" aria-hidden="true"><use href="#i-flower2"/></svg>
     <svg class="floaty spin" style="--s:64px; top:6%; right:3%" aria-hidden="true"><use href="#i-sun"/></svg>
-    <svg class="floaty hide-sm" style="--s:36px; bottom:8%; left:2%; --d:6.5s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
     <div class="wrap">
       <div class="text">
         <span class="eyebrow">Sobre mí</span>
@@ -455,8 +464,6 @@
   <section class="deco" id="como-trabajo">
     <svg class="floaty hide-sm" style="--s:50px; top:14%; left:45%; --d:7.5s; --dl:-3s" aria-hidden="true"><use href="#i-flower"/></svg>
     <svg class="floaty" style="--s:58px; top:5%; right:5%; --d:8s" aria-hidden="true"><use href="#i-brain"/></svg>
-    <svg class="floaty hide-sm" style="--s:38px; top:42%; left:1.5%; --d:6s; --dl:-4s" aria-hidden="true"><use href="#i-heart"/></svg>
-    <svg class="floaty hide-sm" style="--s:44px; bottom:4%; right:2%; --d:7s; --dl:-1s" aria-hidden="true"><use href="#i-star"/></svg>
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Cómo trabajo</span>
@@ -543,7 +550,6 @@
   <section class="topics deco" id="temas">
     <svg class="floaty" style="--s:48px; bottom:10%; left:3%; --d:6.5s; --dl:-4s" aria-hidden="true"><use href="#i-flower2"/></svg>
     <svg class="floaty" style="--s:56px; top:8%; right:7%; --d:7s" aria-hidden="true"><use href="#i-heart"/></svg>
-    <svg class="floaty hide-sm" style="--s:46px; top:30%; right:22%; --d:6s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Motivos de consulta</span>
@@ -576,10 +582,7 @@
     <svg class="floaty hide-sm" style="--s:52px; top:60%; right:12%; --d:8.5s; --dl:-2s" aria-hidden="true"><use href="#i-flower"/></svg>
     <svg class="floaty" style="--s:58px; top:12%; right:9%; --d:6s" aria-hidden="true"><use href="#i-star"/></svg>
     <svg class="floaty" style="--s:72px; top:38%; right:17%; --d:8s; --dl:-3s; --r:10deg" aria-hidden="true"><use href="#i-smile"/></svg>
-    <svg class="floaty spin hide-sm" style="--s:84px; bottom:10%; right:6%" aria-hidden="true"><use href="#i-sun"/></svg>
     <svg class="floaty" style="--s:64px; bottom:30%; right:26%; --d:9s; --dl:-5s" aria-hidden="true"><use href="#i-brain"/></svg>
-    <svg class="floaty hide-sm" style="--s:40px; top:9%; left:58%; --d:5.5s; --dl:-1s" aria-hidden="true"><use href="#i-heart"/></svg>
-    <svg class="floaty hide-sm" style="--s:26px; bottom:7%; left:2%; --d:6.5s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Preguntas frecuentes</span>
@@ -610,7 +613,6 @@
   <section class="deco" id="contacto">
     <svg class="floaty hide-sm" style="--s:42px; top:10px; right:30%; --d:7s; --dl:-5s" aria-hidden="true"><use href="#i-flower2"/></svg>
     <svg class="floaty" style="--s:50px; top:14px; left:3%; --d:6.5s" aria-hidden="true"><use href="#i-smile"/></svg>
-    <svg class="floaty hide-sm" style="--s:44px; bottom:18px; right:4%; --d:8s; --dl:-4s" aria-hidden="true"><use href="#i-brain"/></svg>
     <div class="wrap">
       <div class="contact-card">
         <div style="display: grid; gap: 14px">
@@ -643,7 +645,6 @@
 </main>
 
 <footer class="deco">
-  <svg class="floaty hide-sm" style="--s:36px; top:14px; right:3%; --d:6s" aria-hidden="true"><use href="#i-heart"/></svg>
   <div class="wrap">
     <p class="help"><strong>Si estás atravesando una situación de crisis</strong>, no esperes a un turno: comunicate con el Centro de Asistencia al Suicida al <strong>135</strong> (CABA y GBA) o al <strong>0800 345 1435</strong> (todo el país), o con emergencias al <strong>911</strong>.</p>
     <div class="foot-row">
