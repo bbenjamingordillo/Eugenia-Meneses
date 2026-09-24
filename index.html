@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="eugenia-meneses.png">
+<title>Lic. Eugenia Meneses</title>
+<meta name="description" content="Lic. Eugenia Meneses, psicóloga (UNC). Atención de niños, niñas y adolescentes. Sesiones presenciales y virtuales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Caveat:wght@600&display=swap">
+<style>
+  /* Paleta siempre clara (no cambia con el modo oscuro del dispositivo) */
+  :root, :root[data-theme="dark"] {
+    --ground: #FBFDFB;       /* fondo casi blanco, apenas verdoso */
+    --paper: #FFFFFF;
+    --ink: #1D2742;          /* azul marino: texto principal */
+    --ink-soft: #46506B;
+    --line: #E3EAE4;
+    --grid: #E4F1EA;
+    --sun: #F7CD4E;          /* amarillo */
+    --sun-soft: #FCE3EA;     /* rosa claro */
+    --coral: #EE6A4D;        /* acento */
+    --coral-ink: #C8452A;
+    --mint: #D9F1DF;         /* verde claro */
+    --lilac: #E8F3D6;        /* verde lima claro */
+    --sky: #DAEDFB;          /* celeste claro */
+    --peach: #F1E4D3;        /* marrón claro */
+    --cream: #FFF3DC;        /* crema: cuadros detrás de los textos */
+    --cream-line: #EAD7B4;
+    --on-accent: #1D2742;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: "Baloo 2", "Nunito", system-ui, sans-serif; line-height: 1.1; text-wrap: balance; margin: 0; }
+  h2 { font-size: clamp(1.9rem, 4.2vw, 2.7rem); font-weight: 800; }
+  h3 { font-size: 1.3rem; font-weight: 700; }
+  p { margin: 0; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 8px; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+  .hand { font-family: "Caveat", cursive; font-weight: 600; color: var(--coral-ink); font-size: 1.45rem; line-height: 1.2; }
+  .eyebrow { display: inline-block; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--coral-ink); margin-bottom: 10px; }
+  .lead { color: var(--ink-soft); max-width: 60ch; }
+
+  /* ---------- Header ---------- */
+  header.top {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { display: flex; align-items: center; gap: 20px; min-height: 66px; }
+  .brand { text-decoration: none; display: flex; align-items: center; gap: 10px; font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 1.2rem; white-space: nowrap; }
+  .brand-mark { width: 40px; height: 40px; flex: none; border-radius: 50%; object-fit: cover; border: 2px solid var(--sun); }
+  nav.links { display: flex; gap: 22px; margin-left: auto; }
+  nav.links a { text-decoration: none; font-weight: 600; color: var(--ink-soft); }
+  nav.links a:hover { color: var(--ink); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 999px;
+    background: var(--ink); color: var(--ground);
+    font-weight: 700; text-decoration: none; border: 2px solid var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 0 var(--sun); }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn.small { padding: 8px 16px; font-size: .95rem; }
+  @media (max-width: 820px) { nav.links { display: none; } .top .btn { margin-left: auto; } }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-block: 56px 72px; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.4rem); font-weight: 800; letter-spacing: -.01em; }
+  .hero h1 .under { background: linear-gradient(transparent 62%, var(--sun) 62%, var(--sun) 90%, transparent 90%); padding-inline: 4px; }
+  .hero .role { margin-top: 14px; font-size: 1.2rem; font-weight: 600; color: var(--ink-soft); }
+  .hero .intro { margin-top: 20px; max-width: 52ch; font-size: 1.15rem; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+  .portrait { position: relative; justify-self: center; width: min(400px, 100%); aspect-ratio: 1; max-width: 100%; }
+  .portrait .blob { position: absolute; inset: -6%; width: 112%; height: 112%; animation: spin 60s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .portrait img {
+    position: absolute; inset: 7%; width: 86%; height: 86%;
+    border-radius: 50%; object-fit: cover;
+    border: 6px solid var(--paper);
+    box-shadow: 0 10px 30px rgba(29, 39, 66, .18);
+  }
+  .portrait .note { position: absolute; left: -8%; bottom: 2%; transform: rotate(-8deg); background: var(--cream); padding: 6px 14px; border-radius: 14px; border: 2px solid var(--ink); }
+  .portrait .note .hand { color: var(--ink); font-size: 1.35rem; }
+  .doodle { position: absolute; pointer-events: none; color: var(--ink); opacity: .9; }
+  .d-cloud { top: 18px; left: 46%; width: 90px; }
+  .d-star { bottom: 28px; left: 4%; width: 34px; color: var(--coral); }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .portrait { order: -1; width: min(300px, 80%); }
+    .d-cloud { left: auto; right: 10px; width: 64px; }
+  }
+
+  /* ---------- Secciones ---------- */
+  section { padding-block: 76px; }
+  .sec-head { display: grid; gap: 12px; margin-bottom: 40px; }
+
+  /* Sobre mí */
+  .about { background: var(--paper); border-block: 1px solid var(--line); }
+  .about .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }
+  .about .text { display: grid; gap: 16px; }
+  .creds { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .creds li { display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; padding: 14px 16px; border-radius: 18px; background: var(--cream); border: 1.5px solid var(--cream-line); }
+  .creds .ic { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; }
+  .creds .ic svg { width: 26px; height: 26px; }
+  .creds strong { display: block; font-size: 1.05rem; }
+  .creds span { color: var(--ink-soft); font-size: .95rem; }
+  @media (max-width: 860px) { .about .wrap { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* Con quiénes */
+  .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .who { padding: 28px 26px; border-radius: 26px; display: grid; gap: 10px; align-content: start; }
+  .who .age { font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .who svg { width: 54px; height: 54px; margin-bottom: 4px; }
+  .who.kids { background: var(--sun-soft); }
+  .who.teens { background: var(--lilac); }
+  .who.fam { background: var(--mint); }
+  @media (max-width: 860px) { .who-grid { grid-template-columns: 1fr; } }
+
+  /* Modalidad */
+  .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .mode:nth-child(1) { background: var(--sky) !important; }
+  .mode:nth-child(2) { background: var(--peach) !important; }
+  .mode .tag { background: var(--cream) !important; color: var(--ink) !important; }
+  .mode { position: relative; padding: 30px; border-radius: 26px; border: 2px solid var(--ink); background: var(--paper); display: grid; gap: 10px; box-shadow: 6px 6px 0 var(--ink); }
+  .mode .tag { justify-self: start; padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: .85rem; color: var(--on-accent); }
+  .mode ul { margin: 6px 0 0; padding-left: 1.2em; color: var(--ink-soft); }
+  @media (max-width: 760px) { .modes { grid-template-columns: 1fr; } }
+
+  /* Temas: hoja de cuaderno */
+  .topics {
+    background-color: var(--ground);
+    background-image:
+      linear-gradient(var(--grid) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+    border-block: 1px solid var(--line);
+  }
+  .stickers { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; padding: 0; margin: 0; }
+  .stickers li {
+    padding: 12px 20px; border-radius: 16px; font-weight: 700; font-size: 1.05rem;
+    border: 2px solid var(--ink); color: var(--ink);
+    transition: transform .2s ease;
+  }
+  .stickers li:nth-child(6n+1) { background: var(--sun-soft); transform: rotate(-1.5deg); }
+  .stickers li:nth-child(6n+2) { background: var(--sky); transform: rotate(1deg); }
+  .stickers li:nth-child(6n+3) { background: var(--peach); transform: rotate(-.5deg); }
+  .stickers li:nth-child(6n+4) { background: var(--mint); transform: rotate(1.5deg); }
+  .stickers li:nth-child(6n+5) { background: var(--lilac); transform: rotate(-1deg); }
+  .stickers li:nth-child(6n+6) { background: var(--mint); transform: rotate(.5deg); }
+  .stickers li:hover { transform: rotate(0) scale(1.05); }
+  .quote {
+    margin: 48px auto 0; max-width: 720px; text-align: center;
+    background: var(--cream); border-radius: 28px; padding: 30px 28px; border: 2px dashed var(--cream-line);
+  }
+  .quote p { font-family: "Baloo 2", sans-serif; font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 600; line-height: 1.3; }
+  .quote .hand { margin-top: 10px; display: block; }
+
+  /* Docencia */
+  .teach .wrap { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
+  .teach .board { width: 150px; height: 150px; border-radius: 32px; background: var(--sky); display: grid; place-items: center; }
+  .teach .board svg { width: 86px; height: 86px; }
+  .teach .text { display: grid; gap: 12px; }
+  @media (max-width: 700px) { .teach .wrap { grid-template-columns: 1fr; } .teach .board { width: 110px; height: 110px; } }
+
+  /* FAQ */
+  .faq { background: linear-gradient(160deg, var(--sky) 0%, #EAF6F0 55%, var(--sun-soft) 100%); border-block: 1px solid var(--line); }
+  .faq-list { display: grid; gap: 14px; max-width: 800px; }
+  details { border-radius: 20px; background: var(--paper); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); transition: transform .15s ease; }
+  details:hover { transform: translateY(-2px); }
+  details:nth-child(4n+1) { background: var(--mint); }
+  details:nth-child(4n+2) { background: #FFF6D6; }
+  details:nth-child(4n+3) { background: var(--cream); }
+  details:nth-child(4n+4) { background: var(--peach); }
+  details p { color: var(--ink) !important; }
+
+  /* Dibujitos flotantes */
+  .deco { position: relative; overflow: hidden; }
+  .deco > .wrap { position: relative; z-index: 1; }
+  .floaty { position: absolute; z-index: 0; pointer-events: none; width: var(--s, 48px); height: var(--s, 48px); animation: bob var(--d, 7s) ease-in-out var(--dl, 0s) infinite; }
+  .floaty.spin { animation: turn 24s linear infinite; }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(var(--r, -8deg)); }
+    50% { transform: translateY(-16px) rotate(calc(var(--r, -8deg) * -1)); }
+  }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  .hero .doodle { animation: bob 8s ease-in-out infinite; }
+  .hero .d-star { animation-duration: 5s; animation-delay: -2s; }
+  @media (max-width: 860px) {
+    .floaty { --s: 32px !important; opacity: .75; }
+    .floaty.hide-sm { display: none; }
+  }
+  summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 700; font-size: 1.08rem; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: "Baloo 2", sans-serif; font-size: 1.5rem; line-height: 1; color: var(--coral-ink); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { padding: 0 22px 20px; color: var(--ink-soft); max-width: 66ch; }
+
+  /* Contacto */
+  .contact-card {
+    position: relative; overflow: hidden;
+    background: var(--sun); color: var(--on-accent);
+    border-radius: 36px; padding: clamp(32px, 6vw, 60px);
+    display: grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items: center;
+  }
+  .contact-card h2 { color: var(--on-accent); }
+  .contact-card p { color: var(--on-accent); max-width: 48ch; }
+  .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .contact-list a, .contact-list div {
+    display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px;
+    background: #FFF3DC; color: #1D2742; text-decoration: none; font-weight: 700; border: 2px solid #1D2742;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .contact-list a:hover { transform: translateY(-2px); box-shadow: 0 4px 0 #1D2742; }
+  .contact-list svg { width: 24px; height: 24px; flex: none; }
+  .contact-list small { display: block; font-weight: 600; color: #46506B; }
+  @media (max-width: 800px) { .contact-card { grid-template-columns: 1fr; } }
+
+  /* Footer */
+  footer { padding-block: 40px 48px; color: var(--ink-soft); font-size: .95rem; }
+  footer .wrap { display: grid; gap: 22px; }
+  .help { padding: 18px 20px; border-radius: 18px; background: var(--cream); border: 1.5px solid var(--cream-line); color: var(--ink); }
+  .help strong { color: var(--coral-ink); }
+  .foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  /* ---------- Fondos de color por sección ---------- */
+  body { background: #FFF9F1; }
+  header.top { background: color-mix(in srgb, #FFF9F1 90%, transparent); }
+  #inicio { background: linear-gradient(135deg, #FFEFF3 0%, #FFF7E4 50%, #E4F2FD 100%); }
+  #sobre-mi { background: #E9F6EC; border-color: #D3EBD9; }
+  #como-trabajo { background: #EAF4FC; }
+  #temas { background-color: #FFF8E3; --grid: #F6E8BF; }
+  #docencia { background: #FDEBF0; }
+  #contacto { background: #E6F4EA; }
+  footer { background: #F3E7D8; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <img class="brand-mark" src="eugenia-meneses.png" alt="" width="40" height="40">
+      Lic. Eugenia Meneses
+    </a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#como-trabajo">Cómo trabajo</a>
+      <a href="#temas">Temas</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn small" href="#contacto">Pedir turno</a>
+  </div>
+</header>
+
+<!-- Dibujitos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 40 40">
+      <path d="M20 3l4.4 11.8L37 16l-9.8 8 3.3 12.5L20 29.4 9.5 36.5 12.8 24 3 16l12.6-1.2z" fill="#F7CD4E" stroke="#1D2742" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-smile" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="21" fill="#FFE27A" stroke="#1D2742" stroke-width="2.4"/>
+      <circle cx="17" cy="20" r="2.6" fill="#1D2742"/><circle cx="31" cy="20" r="2.6" fill="#1D2742"/>
+      <circle cx="12.5" cy="28" r="3" fill="#F6A5B8"/><circle cx="35.5" cy="28" r="3" fill="#F6A5B8"/>
+      <path d="M16 29c4 5 12 5 16 0" fill="none" stroke="#1D2742" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 64 64">
+      <g stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round">
+        <path d="M32 3v8M32 53v8M3 32h8M53 32h8M11.5 11.5l5.7 5.7M46.8 46.8l5.7 5.7M11.5 52.5l5.7-5.7M46.8 17.2l5.7-5.7"/>
+      </g>
+      <circle cx="32" cy="32" r="14" fill="#FFD25E" stroke="#1D2742" stroke-width="2.2"/>
+      <path d="M26 34c3 3.5 9 3.5 12 0" fill="none" stroke="#1D2742" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="27" cy="29" r="1.6" fill="#1D2742"/><circle cx="37" cy="29" r="1.6" fill="#1D2742"/>
+    </symbol>
+    <symbol id="i-brain" viewBox="0 0 64 54">
+      <path d="M32 6C27 2 19 3 18 9 11 8 6 14 9 20c-6 3-6 12 0 15-1 7 6 12 12 9 2 6 9 7 11 2zM32 6c5-4 13-3 14 3 7-1 12 5 9 11 6 3 6 12 0 15 1 7-6 12-12 9-2 6-9 7-11 2z" fill="#F8BFD0" stroke="#1D2742" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M32 6v40M19 18c4 0 6 3 5 6M15 30c4-2 8 0 9 3M45 18c-4 0-6 3-5 6M49 30c-4-2-8 0-9 3" fill="none" stroke="#1D2742" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 40 36">
+      <path d="M20 33S3 23 3 12C3 6.5 7 3 11.5 3c3.8 0 6.6 2.2 8.5 5 1.9-2.8 4.7-5 8.5-5C33 3 37 6.5 37 12c0 11-17 21-17 21z" fill="#F07C66" stroke="#1D2742" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero deco" id="inicio">
+    <svg class="floaty" style="--s:42px; top:10%; left:3%; --d:6s" aria-hidden="true"><use href="#i-heart"/></svg>
+    <svg class="floaty hide-sm" style="--s:50px; bottom:12%; right:3%; --d:7.5s; --dl:-3s" aria-hidden="true"><use href="#i-smile"/></svg>
+    <svg class="doodle d-cloud" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+      <path d="M20 48c-9 0-14-6-12-13 2-6 8-8 13-6 1-10 10-16 20-14 7 1 11 6 12 11 6-4 16-2 18 6 8 0 12 6 10 12-1 3-4 5-8 5H20z"/>
+    </svg>
+    <svg class="doodle d-star" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true">
+      <path d="M20 2l4.5 12.5L38 16l-10.5 8.5L31 38 20 30.5 9 38l3.5-13.5L2 16l13.5-1.5z"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Psicóloga · Niñeces y adolescencias</span>
+        <h1>Un espacio para <span class="under">poner en palabras</span> lo que pasa</h1>
+        <p class="role">Lic. Eugenia Meneses — Licenciada en Psicología (UNC)</p>
+        <p class="intro">Acompaño a niños, niñas y adolescentes —y a sus familias— en esos momentos en que algo duele, se repite o simplemente no se puede decir. Sesiones presenciales y virtuales.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contacto">
+            Consultar un turno
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn ghost" href="#como-trabajo">Cómo trabajo</a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <svg class="blob" viewBox="0 0 200 200" aria-hidden="true">
+          <path fill="var(--sun)" d="M100 4c9 0 13 9 21 11s17-3 23 3 2 15 7 22 15 8 17 16-6 13-6 21 9 13 6 21-12 9-16 16-1 17-8 22-15 0-23 3-12 11-21 11-13-9-21-11-17 3-23-3-2-15-7-22-15-8-17-16 6-13 6-21-9-13-6-21 12-9 16-16 1-17 8-22 15 0 23-3 12-11 21-11z"/>
+        </svg>
+        <img src="eugenia-meneses.png" alt="Retrato de la Lic. Eugenia Meneses, sonriendo, sentada en su consultorio" width="640" height="640">
+        <div class="note"><span class="hand">¡Hola! Soy Euge</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE MÍ ================= -->
+  <section class="about deco" id="sobre-mi">
+    <svg class="floaty spin" style="--s:64px; top:6%; right:3%" aria-hidden="true"><use href="#i-sun"/></svg>
+    <svg class="floaty hide-sm" style="--s:36px; bottom:8%; left:2%; --d:6.5s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
+    <div class="wrap">
+      <div class="text">
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Escuchar lo singular de cada historia</h2>
+        <p>Soy Licenciada en Psicología egresada de la Universidad Nacional de Córdoba y profesora de nivel superior. Mi práctica clínica está dedicada, sobre todo, a las infancias y adolescencias.</p>
+        <p>Creo en un espacio donde se pueda jugar, dibujar, hablar o quedarse en silencio: cada chico y cada chica encuentra su propio modo de decir lo que le pasa. Mi trabajo es alojar eso, sin apuro y sin etiquetas.</p>
+        <span class="hand">“Hay algo en lo vivo que insiste…”</span>
+      </div>
+      <ul class="creds">
+        <li>
+          <div class="ic" style="background: var(--sun-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6-9 6-9-6z"/><path d="M7 12.5V17c3 2 7 2 10 0v-4.5"/><path d="M21 10v5"/></svg></div>
+          <div><strong>Licenciada en Psicología</strong><span>Universidad Nacional de Córdoba (UNC)</span></div>
+        </li>
+        <li>
+          <div class="ic" style="background: var(--sky)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20l2-4M17 20l-2-4M7 9h6M7 12h4"/></svg></div>
+          <div><strong>Profesora de nivel superior</strong><span>Formación docente en psicología</span></div>
+        </li>
+        <li>
+          <div class="ic" style="background: var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 20c0-2.4 1.2-4.3 3.5-4.3S22 17.6 22 20"/></svg></div>
+          <div><strong>Niños, niñas y adolescentes</strong></div>
+        </li>
+        <li>
+          <div class="ic" style="background: var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="13" height="10" rx="1.5"/><path d="M15 9l5-3v8l-5-3"/><path d="M6 19h12"/></svg></div>
+          <div><strong>Presencial y virtual</strong><span>Sesiones en consultorio o por videollamada</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CON QUIÉNES / MODALIDAD ================= -->
+  <section class="deco" id="como-trabajo">
+    <svg class="floaty" style="--s:58px; top:5%; right:5%; --d:8s" aria-hidden="true"><use href="#i-brain"/></svg>
+    <svg class="floaty hide-sm" style="--s:38px; top:42%; left:1.5%; --d:6s; --dl:-4s" aria-hidden="true"><use href="#i-heart"/></svg>
+    <svg class="floaty hide-sm" style="--s:44px; bottom:4%; right:2%; --d:7s; --dl:-1s" aria-hidden="true"><use href="#i-star"/></svg>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Cómo trabajo</span>
+        <h2>Cada edad tiene su forma de decir</h2>
+        <p class="lead">El juego, el dibujo y la palabra son las herramientas de cada encuentro. El ritmo lo marca quien consulta.</p>
+      </div>
+
+      <div class="who-grid">
+        <article class="who kids">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="8" y="30" width="20" height="20" rx="3" fill="var(--sun)"/>
+            <path d="M36 50l10-24 10 24z" fill="var(--coral)"/>
+            <circle cx="20" cy="16" r="8" fill="var(--sky)"/>
+            <path d="M14 36h8M18 32v8"/>
+          </svg>
+          <span class="age">Infancias</span>
+          <h3>Niños y niñas</h3>
+          <p>El juego es el lenguaje de la infancia. A través de él aparecen miedos, enojos, cambios en la familia o en la escuela, y se abren nuevas formas de tramitarlos.</p>
+        </article>
+        <article class="who teens">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="20" y="6" width="24" height="44" rx="5" fill="var(--paper)"/>
+            <path d="M28 12h8"/>
+            <path d="M26 28c0-3 2-5 4.5-5S34 25 34 28c0 4-3 5-3 8M31 41v.5"/>
+            <path d="M10 24l4 2M8 34h5M50 24l-4 2M56 34h-5"/>
+          </svg>
+          <span class="age">Adolescencias</span>
+          <h3>Adolescentes</h3>
+          <p>Un lugar propio para pensar lo que se vive: vínculos, redes, cuerpo, identidad, presiones y preguntas. Para distinguir “la edad” de aquello que merece atención.</p>
+        </article>
+        <article class="who fam">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M32 54S10 41 10 25c0-7 5-12 11-12 5 0 9 3 11 7 2-4 6-7 11-7 6 0 11 5 11 12 0 16-22 29-22 29z" fill="var(--peach)"/>
+            <path d="M24 30h16M32 22v16"/>
+          </svg>
+          <span class="age">Familias</span>
+          <h3>Madres, padres y familias</h3>
+          <p>Encuentros de orientación para acompañar a los adultos: entender qué le pasa a su hijo o hija y pensar juntos cómo estar presentes.</p>
+        </article>
+      </div>
+
+      <div class="modes" style="margin-top: 36px">
+        <article class="mode">
+          <span class="tag" style="background: var(--sun)">Presencial</span>
+          <h3>En el consultorio</h3>
+          <p>Un espacio pensado para chicos y grandes, con juegos, materiales de dibujo y tiempo para cada uno.</p>
+          <ul>
+            <li>Turnos semanales con día y horario fijo</li>
+            <li>Córdoba, Argentina</li>
+          </ul>
+        </article>
+        <article class="mode">
+          <span class="tag" style="background: var(--mint); color: var(--ink)">Virtual</span>
+          <h3>Por videollamada</h3>
+          <p>La misma escucha, desde donde estés. Ideal para adolescentes y adultos, o cuando la distancia complica.</p>
+          <ul>
+            <li>Desde cualquier lugar del país o del exterior</li>
+            <li>Solo necesitás un lugar tranquilo y conexión</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TEMAS ================= -->
+  <section class="topics deco" id="temas">
+    <svg class="floaty" style="--s:56px; top:8%; right:7%; --d:7s" aria-hidden="true"><use href="#i-heart"/></svg>
+    <svg class="floaty hide-sm" style="--s:46px; top:30%; right:22%; --d:6s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Motivos de consulta</span>
+        <h2>Algunas de las cosas de las que hablamos</h2>
+        <p class="lead">No hace falta tener un “problema grave” para consultar. A veces alcanza con notar que algo cambió.</p>
+      </div>
+      <ul class="stickers">
+        <li>Cambios y comienzos de clases</li>
+        <li>Miedos y angustias</li>
+        <li>Pérdidas y duelos</li>
+        <li>Separaciones familiares</li>
+        <li>Adolescencia y señales de alarma</li>
+        <li>Celos y vínculos</li>
+        <li>Culpa o responsabilidad</li>
+        <li>Redes sociales y retos virales</li>
+        <li>El juego y el aburrimiento</li>
+        <li>Secretos que duelen</li>
+        <li>Prevención del suicidio</li>
+        <li>Violencias en los vínculos</li>
+      </ul>
+      <div class="quote">
+        <p>“Hay experiencias que parecen definirnos… una pérdida, una separación, un rechazo.”</p>
+        <span class="hand">— y sin embargo, siempre hay algo más para decir</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOCENCIA ================= -->
+  <section class="teach deco" id="docencia">
+    <svg class="floaty" style="--s:48px; top:14%; right:6%; --d:6.5s" aria-hidden="true"><use href="#i-star"/></svg>
+    <svg class="floaty hide-sm" style="--s:52px; bottom:12%; right:18%; --d:8s; --dl:-3s" aria-hidden="true"><use href="#i-smile"/></svg>
+    <div class="wrap">
+      <div class="board">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 20l24-10 24 10-24 10z" fill="var(--paper)"/>
+          <path d="M18 25v12c8 6 20 6 28 0V25"/>
+          <path d="M56 20v14"/>
+          <circle cx="56" cy="37" r="2.5" fill="var(--coral)"/>
+        </svg>
+      </div>
+      <div class="text">
+        <span class="eyebrow">Docencia</span>
+        <h2>También en el aula</h2>
+        <p class="lead">Como profesora de nivel superior, comparto con estudiantes y docentes una mirada sobre las infancias y adolescencias de hoy: lo que la época les propone y lo que cada subjetividad hace con eso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PREGUNTAS ================= -->
+  <section class="faq deco" id="preguntas">
+    <svg class="floaty" style="--s:58px; top:12%; right:9%; --d:6s" aria-hidden="true"><use href="#i-star"/></svg>
+    <svg class="floaty" style="--s:72px; top:38%; right:17%; --d:8s; --dl:-3s; --r:10deg" aria-hidden="true"><use href="#i-smile"/></svg>
+    <svg class="floaty spin hide-sm" style="--s:84px; bottom:10%; right:6%" aria-hidden="true"><use href="#i-sun"/></svg>
+    <svg class="floaty" style="--s:64px; bottom:30%; right:26%; --d:9s; --dl:-5s" aria-hidden="true"><use href="#i-brain"/></svg>
+    <svg class="floaty hide-sm" style="--s:40px; top:9%; left:58%; --d:5.5s; --dl:-1s" aria-hidden="true"><use href="#i-heart"/></svg>
+    <svg class="floaty hide-sm" style="--s:26px; bottom:7%; left:2%; --d:6.5s; --dl:-2s" aria-hidden="true"><use href="#i-star"/></svg>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Antes de la primera consulta</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>¿Cómo es la primera entrevista con un niño o niña?</summary>
+          <p>Generalmente comienzo con un encuentro con madres, padres o adultos a cargo, para conocer el motivo de consulta y la historia. Luego llegan los encuentros con el niño o la niña, donde el juego y el dibujo ocupan un lugar central.</p>
+        </details>
+        <details>
+          <summary>¿Los padres participan del tratamiento?</summary>
+          <p>Sí. En la clínica con niños y adolescentes, los adultos a cargo forman parte del proceso a través de entrevistas periódicas, siempre cuidando el espacio propio de cada chico o chica.</p>
+        </details>
+        <details>
+          <summary>¿Las sesiones virtuales funcionan igual?</summary>
+          <p>La modalidad virtual es una muy buena opción, sobre todo para adolescentes y adultos. Con los más chicos evaluamos juntos si conviene la modalidad presencial.</p>
+        </details>
+        <details>
+          <summary>¿Lo que se habla en sesión es confidencial?</summary>
+          <p>Sí. Todo lo que se dice en el espacio terapéutico está protegido por el secreto profesional, con las excepciones que establece la ley cuando está en riesgo la integridad de la persona o de terceros.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="deco" id="contacto">
+    <svg class="floaty" style="--s:50px; top:14px; left:3%; --d:6.5s" aria-hidden="true"><use href="#i-smile"/></svg>
+    <svg class="floaty hide-sm" style="--s:44px; bottom:18px; right:4%; --d:8s; --dl:-4s" aria-hidden="true"><use href="#i-brain"/></svg>
+    <div class="wrap">
+      <div class="contact-card">
+        <div style="display: grid; gap: 14px">
+          <h2>¿Charlamos?</h2>
+          <p>Escribime para consultar disponibilidad de turnos, presenciales o virtuales. Te respondo a la brevedad.</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <a href="https://wa.me/5493517540694" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4.1-1z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.5-1.8-1.3-2.3-2.3l.8-1-1-2z"/></svg>
+              <span>351 754-0694<small>WhatsApp · Consultas y turnos</small></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/lic_eugemeneses/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+              <span>@lic_eugemeneses<small>Instagram</small></span>
+            </a>
+          </li>
+          <li>
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <span>Córdoba, Argentina<small>Presencial · y online a todo el país</small></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="deco">
+  <svg class="floaty hide-sm" style="--s:36px; top:14px; right:3%; --d:6s" aria-hidden="true"><use href="#i-heart"/></svg>
+  <div class="wrap">
+    <p class="help"><strong>Si estás atravesando una situación de crisis</strong>, no esperes a un turno: comunicate con el Centro de Asistencia al Suicida al <strong>135</strong> (CABA y GBA) o al <strong>0800 345 1435</strong> (todo el país), o con emergencias al <strong>911</strong>.</p>
+    <div class="foot-row">
+      <span>© 2026 Lic. Eugenia Meneses · Psicóloga (UNC)</span>
+      <a href="https://www.instagram.com/lic_eugemeneses/" target="_blank" rel="noopener">@lic_eugemeneses</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
